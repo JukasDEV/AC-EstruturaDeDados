@@ -7,7 +7,9 @@ import (
 func main() {
 	fmt.Println("Hello, World!")
 	// e_primo()
-	e_bissexto()
+	//e_bissexto()
+	e_fibo(1)
+
 }
 
 func e_primo() {
@@ -48,4 +50,21 @@ func e_bissexto() {
 		fmt.Print("Não é Bissexto")
 
 	}
+}
+
+func e_fibo(num int) {
+	listaAuxiliar := []int{num}
+	limite := 9
+	var intAuxiliar int
+	for i := 0; i <= limite; i++ {
+		if len(listaAuxiliar) == 1 {
+			intAuxiliar = listaAuxiliar[len(listaAuxiliar)-1]
+			listaAuxiliar = append(listaAuxiliar, intAuxiliar)
+		} else {
+			intAuxiliar = listaAuxiliar[len(listaAuxiliar)-1] + listaAuxiliar[len(listaAuxiliar)-2]
+			listaAuxiliar = append(listaAuxiliar, intAuxiliar)
+		}
+	}
+
+	fmt.Println(listaAuxiliar)
 }

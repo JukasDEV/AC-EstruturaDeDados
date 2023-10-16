@@ -1,14 +1,12 @@
 package main
 
 import (
+	"ac3/contato"
+	"ac3/operacoes"
 	"bufio"
 	"fmt"
 	"os"
-	"ac3/contato"
-	"ac3/operacoes"
 )
-
-
 
 func main() {
 	var contatos [5]contato.Contato
